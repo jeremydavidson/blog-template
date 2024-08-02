@@ -1,5 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
+  root:true,
 	extends: ['plugin:astro/recommended'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -17,7 +18,9 @@ module.exports = {
 			},
 			rules: {
 				// override/add rules settings here, such as:
-				'astro/no-set-html-directive': 'error'
+				'astro/no-set-html-directive': 'error',
+        quotes: ["warn", "double"],
+        semi: ["warn", "never"],                  
 			}
 		}
 	]
